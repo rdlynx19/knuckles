@@ -199,36 +199,7 @@ void loop() {
   // Serial.write(255); 
  
 
-  // Read data from joyStick
-  joyX = analogRead(JoyXPin);
-  joyY = analogRead(JoyYPin);
-  // Serial.print("X Axis: ");
-  // Serial.print(joyX);
-  // Serial.print(" Y Axis: ");
-  // Serial.println(joyY);
-
   // Read state of the buttons
-  if(digitalRead(WhiteBtnPin) == LOW){
-    delay(50);
-    if(digitalRead(WhiteBtnPin) == LOW){
-      Serial.write(3);
-    }
-    // Serial.println("White Button pressed!");
-  }
-  if(digitalRead(YellowBtnPin) == LOW){
-    delay(50);
-    if (digitalRead(YellowBtnPin) == LOW){
-      Serial.write(2);
-    }
-    // Serial.println("Yellow Button Pressed!");
-  }
-  if(digitalRead(BlueBtnPin) == LOW){
-    delay(50);
-    if (digitalRead(BlueBtnPin) == LOW){
-      Serial.write(4);
-    }
-    // Serial.println("Blue Button Pressed!");
-  }
   if(digitalRead(GreenBtnPin) == LOW){
     delay(50);
     if (digitalRead(GreenBtnPin) == LOW){
@@ -236,12 +207,67 @@ void loop() {
     }
     // Serial.println("Green Button Pressed!");
   }
+   else{
+    Serial.write(0);
+  }
+
+  if(digitalRead(YellowBtnPin) == LOW){
+    delay(50);
+    if (digitalRead(YellowBtnPin) == LOW){
+      Serial.write(2);
+    }
+    // Serial.println("Yellow Button Pressed!");
+  }
+  else{
+    Serial.write(0);
+  }
+
+  if(digitalRead(WhiteBtnPin) == LOW){
+    delay(50);
+    if(digitalRead(WhiteBtnPin) == LOW){
+      Serial.write(3);
+    }
+    // Serial.println("White Button pressed!");
+  }
+  else{
+    Serial.write(0);
+  }
+ 
+  if(digitalRead(BlueBtnPin) == LOW){
+    delay(50);
+    if (digitalRead(BlueBtnPin) == LOW){
+      Serial.write(4);
+    }
+    // Serial.println("Blue Button Pressed!");
+  }
+   else{
+    Serial.write(0);
+  }
+ 
   if(digitalRead(ThumbClickBtnPin) == LOW){
     delay(50);
     if(digitalRead(ThumbClickBtnPin) == LOW){
       Serial.write(5);
     }
   }
+   else{
+    Serial.write(0);
+  }
+
+  // Read data from joyStick
+  joyX = analogRead(JoyXPin);
+  int XMsb = joyX >> 3;
+  int XLsb = joyX & 7;
+  Serial.write(XMsb);
+  Serial.write(XLsb);
+
+  joyY = analogRead(JoyYPin);
+  int YMsb = joyY >> 3;
+  int YLsb = joyY & 7;
+  Serial.write(YMsb);
+  Serial.write(YLsb);
+
+
   Serial.write(255);
   delay(50);
 }
