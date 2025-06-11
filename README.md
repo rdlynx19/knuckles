@@ -1,6 +1,7 @@
 # Knuckles
 
-**Knuckles** is a digital musical instrument that combines a joystick, trigger buttons, and IMU-based orientation data to dynamically control audio tracks and sound effects in Max MSP.
+**Knuckles** is a digital musical instrument that combines a joystick, trigger buttons, and IMU-based orientation data to dynamically control audio tracks and sound effects in Max MSP.<br>
+Website: [Knuckles](pushkardave.com/knuckles)<br>
  ![Knuckles Setup](knuckles.gif)
 
 ---
