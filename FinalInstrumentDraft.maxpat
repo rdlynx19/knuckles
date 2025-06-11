@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 2492.0, 1289.0 ],
+		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -3069,8 +3069,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 245.0, 77.0, 74.0, 22.0 ],
-					"text" : "port COM15"
+					"patching_rect" : [ 245.0, 77.0, 73.0, 22.0 ],
+					"text" : "port COM11"
 				}
 
 			}
@@ -3081,8 +3081,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 277.0, 142.0, 124.0, 22.0 ],
-					"text" : "serial COM15 115200"
+					"patching_rect" : [ 277.0, 142.0, 123.0, 22.0 ],
+					"text" : "serial COM11 115200"
 				}
 
 			}
